@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage[left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm, bindingoffset=6mm]{geometry} 
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{xcolor}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+
+\definecolor{mygray}{RGB}{6,249,249} % Custom color definition
+\definecolor{bluedark}{RGB}{0,0,128} % Custom color definition
+
+\begin{document}
+
+\begin{tikzpicture}
+
+% Outer rectangle for the left section
+\draw(0,0) rectangle (6,26);
+
+% Section for photo
+\draw (0,20) rectangle (6,26); 
+\node at (3,23) {\includegraphics[width=6cm]{path_to_your_photo}};  % Replace 'path_to_your_photo' with the actual path to your photo
+
+% Main section for information
+\draw (0,0) rectangle (6,18);
+
+% LANGUAGES Section
+\draw (0,0) rectangle (6,3);
+\fill[mygray] (0,0) rectangle (6,3);   
+\node at (1.8,2.7) {\color{bluedark}{\textbf{\textsc{LANGUAGES}}}};  % Title for Languages section
+
+% Language details
+\node at (2,2.3){\color{bluedark}{{\tiny\textbf{Language1:} Proficiency Level}}};  % Replace 'Language1' and 'Proficiency Level' with your details
+\node at (2.4,1.9){\color{bluedark}{{\tiny\textbf{Language2:}}} \tiny\color{bluedark!80}{{\hspace{68pt} Proficiency Level}}};  % Replace 'Language2' and 'Proficiency Level' with your details
+\draw[dashed, line width=3pt, blue!100, dash pattern=on 10pt] (0.5,1.6) -- (3.9,1.6);  % Adjust the dash pattern as needed
+\draw[dashed, line width=3pt, blue!20, dash pattern=on 10pt] (4,1.6) -- (4.6,1.6);
+\node at (5.2,1.6){\tiny{Proficiency Description}};  % Replace 'Proficiency Description' with your details
+
+% SKILLS Section
+\draw (0,3) rectangle (6,14);
+\fill[mygray] (0,3) rectangle (6,14);
+\node at (1.25,13.7) {\color{bluedark}{\textbf{\textsc{SKILLS}}}};  % Title for Skills section
+
+% Skill items (replace with your skills)
+\filldraw [black] (0.65,13) circle (1pt);
+\node at (2.8,13){\tiny{Skill 1, Skill 2, Skill 3}};
+\filldraw [black] (0.65,12.4) circle (1pt);
+\node at (3.1,12.4){\tiny{Skill 4, Skill 5, Skill 6}};
+\filldraw [black] (0.65,12.1) circle (1pt);
+\node at (2.45,12.1){\tiny{Skill 7, Skill 8}};
+\filldraw [black] (0.65,11.8) circle (1pt);
+\node at (1.8,11.8){\tiny{Skill 9}};
+\filldraw [black] (0.65,11.5) circle (1pt);
+\node at (2.75,11.5){\tiny{Skill 10, Skill 11}};
+\filldraw [black] (0.65,10.9) circle (1pt);
+\node at (2.6,10.9){\tiny{Skill 12}};
+\filldraw [black] (0.65,10.3) circle (1pt);
+\node at (3,10.3){\tiny{Skill 13, Skill 14, Skill 15}};
+
+% SUMMARY Section
+\draw (0,14) rectangle (6,17);
+\fill[mygray] (0,14) rectangle (6,17);
+\node at (1.6,16.7) {\color{bluedark}{\textbf{\textsc{SUMMARY}}}};  % Title for Summary section
+\node at (2.8,16){Short summary about yourself};  % Replace with a brief summary about yourself
+\node at (2.25,15.7){describing your key strengths};
+\node at (2.4,15.4){and attributes};
+
+% CONTACT Section
+\draw (0,17) rectangle (6,20);
+\fill[mygray] (0,17) rectangle (6,20);
+\node at (1.5,19.2) {\color{bluedark}{\textbf{\textsc{CONTACT}}}};  % Title for Contact section
+
+% Contact details
+\node at (0.9,18.5) {\includegraphics[width=6pt]{path_to_location_icon}};  % Replace 'path_to_location_icon' with the actual path to your location icon
+\node at (2.9,18.5){City, State, ZIP Code};  % Replace with your location details
+\node at (0.9,18) {\includegraphics[angle=-90, width=6pt]{path_to_phone_icon}};  % Replace 'path_to_phone_icon' with the actual path to your phone icon
+\node at (2.4,18){+123 456 7890};  % Replace with your phone number
+\node at (0.9,17.5) {\includegraphics[width=9pt]{path_to_email_icon}};  % Replace 'path_to_email_icon' with the actual path to your email icon
+\node at (3.1,17.5){\small your_email@example.com};  % Replace with your email address
+
+% Outer rectangle for the right section
+\draw(6,0) rectangle (19,26);
+
+% Section titles and details
+\node at (10,24){\Huge\color{blue}{\textbf{Your Name}}};  % Replace 'Your Name' with your actual name
+
+% EXPERIENCE Section
+\node at (9,22){\color{blue}{\textbf{\textsc{EXPERIENCE}}}};  % Title for Experience section
+\filldraw [black] (7,21) circle (2pt);
+\node at (7,21) {};  % Empty node for spacing
+\node at (8.9,21){\color{bluedark}{\textbf{Job Title}}};  % Replace 'Job Title' with your job title
+\node at (12.8,20.95){\color{bluedark}{\tiny (Company Name, Location)}};  % Replace with your company name and location
+\node at (10.3,20.7){\color{bluedark}{\small Start Date - End Date}};  % Replace with your job duration
+
+% Additional experience items (repeat as necessary)
+\filldraw [black] (7,20) circle (2pt);
+\node at (7,20) {};  % Empty node for spacing
+\node at (9.05,20){\color{bluedark}{\textbf{Job Title}}};  % Replace 'Job Title' with your job title
+\node at (14.2,19.95){\color{bluedark}{\tiny (Company Name, Location)}};  % Replace with your company name and location
+\node at (10.6,19.7){\color{bluedark}{\small Start Date - End Date}};  % Replace with your job duration
+
+% EDUCATION Section
+\filldraw [black] (7,14.5) circle (5pt);
+\node at (7,14.5) {\includegraphics[width=20pt]{path_to_graduate_cap_icon}};  % Replace 'path_to_graduate_cap_icon' with the actual path to your icon
+\node at (9,14.5){\color{blue}{\textbf{\textsc{EDUCATION}}}};  % Title for Education section
+
+% Education items (repeat as necessary)
+\filldraw [black] (7,11.2) circle (2pt);
+\node at (7,11.2) {};  % Empty node for spacing
+\node at (11.7,11.2){\color{bluedark}{\textbf{Degree}}};  % Replace 'Degree' with your degree
+\node at (11.8,10.9){\color{bluedark}{\small\textbf{"Field of Study"}}};  % Replace 'Field of Study' with your field of study
+\node at (11.7,10.6){\color{bluedark}{\tiny (Institution Name, Location)}};  % Replace with your institution name and location
+\node at (11.7,10.3){\color{bluedark}{\tiny{Start Date - End Date}}};  % Replace with your study duration
+
+% SPORTS AND VOLUNTEERING Section
+\filldraw [black] (7,3.1) circle (5pt);
+\node at (7,3.1) {\includegraphics[width=20pt]{path_to_sports_icon}};  % Replace 'path_to_sports_icon' with the actual path to your icon
+\node at (9,3.1){\color{blue}{\textbf{\textsc{SPORTS AND VOLUNTEERING}}}};  % Title for Sports and Volunteering section
+\node at (8.9,2.6){\small{Year - Current}};  % Replace 'Year - Current' with your duration
+\filldraw [black] (7,2.3) circle (2pt);
+\node at (11.5,2.3) {\small{ - Description of your sports and volunteering achievements}};  % Replace with a description of your achievements
+
+\draw(6,0) rectangle (19,26);
+
+\end{tikzpicture}
+
+\end{document}
